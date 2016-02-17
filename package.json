@@ -1,5 +1,5 @@
 {
-  "name": "flatten-obj",
+  "name": "obj-flatten",
   "version": "1.0.0",
   "description": "Convert nested objects in flatten ones.",
   "main": "lib/index.js",
@@ -25,10 +25,17 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IonicaBizau/flatten-obj.git"
+    "url": "git+https://github.com/IonicaBizau/obj-flatten.git"
   },
   "bugs": {
-    "url": "https://github.com/IonicaBizau/flatten-obj/issues"
+    "url": "https://github.com/IonicaBizau/obj-flatten/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/flatten-obj#readme"
+  "homepage": "https://github.com/IonicaBizau/obj-flatten#readme",
+  "blah": {
+    "related": {
+      "ul": [
+        "[`obj-unflatten`](https://github.com/IonicaBizau/obj-unflatten) – Convert flatten objects in nested ones."
+      ]
+    }
+  }
 }
