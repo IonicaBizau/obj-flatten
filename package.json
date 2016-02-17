@@ -1,0 +1,34 @@
+{
+  "name": "flatten-obj",
+  "version": "1.0.0",
+  "description": "Convert nested objects in flatten ones.",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flatten",
+    "nested",
+    "object",
+    "utility"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "dependencies": {
+    "iterate-object": "^1.3.1",
+    "typpy": "^2.3.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/flatten-obj.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/flatten-obj/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/flatten-obj#readme"
+}
