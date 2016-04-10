@@ -1,6 +1,6 @@
 {
   "name": "obj-flatten",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Convert nested objects in flatten ones.",
   "main": "lib/index.js",
   "directories": {
