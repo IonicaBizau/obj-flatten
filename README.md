@@ -1,14 +1,18 @@
+
 # obj-flatten [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/obj-flatten.svg)](https://www.npmjs.com/package/obj-flatten) [![Downloads](https://img.shields.io/npm/dt/obj-flatten.svg)](https://www.npmjs.com/package/obj-flatten) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Convert nested objects in flatten ones.
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save obj-flatten
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 const flatten = require("obj-flatten");
@@ -20,31 +24,43 @@ console.log(flatten({
     }
   , age: 20
 }));
-// { 'name.first': 'Johnny', 'name.last': 'B.', age: 20 }
+// => { 'name.first': 'Johnny', 'name.last': 'B.', age: 20 }
+
+console.log(flatten({
+    name: {
+        first: "Johnny"
+      , last: "B."
+    }
+  , age: 20
+}, "_"));
+// => { name_first: 'Johnny', name_last: 'B.', age: 20 }
 ```
 
-## Documentation
+## :memo: Documentation
 
-### `flattenObject(obj)`
+
+### `flattenObject(obj, del)`
 Converts nested objects in flatten ones.
 
 #### Params
-- **Object** `obj`: The object that should be converted
+- **Object** `obj`: The object that should be converted.
+- **String** `del`: The delimiter string (default: ".").
 
 #### Return
 - **Object** Flatten object
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
-## Related
+## :sparkles: Related
 
  - [`obj-unflatten`](https://github.com/IonicaBizau/obj-unflatten) – Convert flatten objects in nested ones.
 
-## License
+
+
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
