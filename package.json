@@ -1,6 +1,6 @@
 {
   "name": "obj-flatten",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Convert nested objects in flatten ones.",
   "main": "lib/index.js",
   "directories": {
@@ -37,5 +37,16 @@
         "[`obj-unflatten`](https://github.com/IonicaBizau/obj-unflatten) – Convert flatten objects in nested ones."
       ]
     }
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
