@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon test | tap-difflet",
+    "test": "node test | tap-difflet"
   },
   "keywords": [
     "flatten",
@@ -22,7 +23,10 @@
     "iterate-object": "^1.3.1",
     "typpy": "^2.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tap-difflet": "^0.6.0",
+    "tape": "^4.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IonicaBizau/obj-flatten.git"
