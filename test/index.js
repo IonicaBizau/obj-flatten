@@ -116,5 +116,25 @@ test('arrays', function (t) {
       },
     ]
   }, 'custom delimiter');
+
+  t.deepEqual(flatten({
+    personalDetails: {
+        firstName: 'Frank',
+        lastName: 'Sinatra',
+        children: [
+            { personalDetails: { isRapper: false, name: { firstName: 'Nancy' } } },
+        ]
+    }
+  }), {
+    'personalDetails.firstName': 'Frank',
+    'personalDetails.lastName': 'Sinatra',
+    'personalDetails.children': [
+      {
+        'personalDetails.isRapper': false,
+        'personalDetails.name.firstName': 'Nancy'
+      },
+    ]
+  }, 'with false value');
+
   t.end();
 })
