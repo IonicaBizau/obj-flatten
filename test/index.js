@@ -97,5 +97,24 @@ test('arrays', function (t) {
       },
     ]
   }, 'flatten objects inside arrays');
+
+  t.deepEqual(flatten({
+    personalDetails: {
+        firstName: 'Frank',
+        lastName: 'Sinatra',
+        children: [
+            { personalDetails: { firstName: 'Nancy', lastName: 'Sinatra' } },
+        ]
+    }
+  }, '_'), {
+    'personalDetails_firstName': 'Frank',
+    'personalDetails_lastName': 'Sinatra',
+    'personalDetails_children': [
+      {
+        'personalDetails_firstName': 'Nancy',
+        'personalDetails_lastName': 'Sinatra'
+      },
+    ]
+  }, 'custom delimiter');
   t.end();
 })
