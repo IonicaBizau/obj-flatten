@@ -62,3 +62,8 @@ test('separator', function (t) {
   });
   t.end();
 })
+
+test('strings', function (t) {
+  t.deepEqual(flatten('some string'), 'some string', 'string value at root');
+  t.end();
+})
