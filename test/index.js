@@ -67,3 +67,35 @@ test('strings', function (t) {
   t.deepEqual(flatten('some string'), 'some string', 'string value at root');
   t.end();
 })
+
+test('arrays', function (t) {
+  t.deepEqual(flatten({
+    personalDetails: {
+        firstName: 'Frank',
+        lastName: 'Sinatra',
+        children: [
+            { personalDetails: { firstName: 'Nancy', lastName: 'Sinatra' } },
+            { personalDetails: { firstName: 'Tina', lastName: 'Sinatra' } },
+            { personalDetails: { firstName: 'Frank', lastName: 'Sinatra' } }
+        ]
+    }
+  }), {
+    'personalDetails.firstName': 'Frank',
+    'personalDetails.lastName': 'Sinatra',
+    'personalDetails.children': [
+      {
+        'personalDetails.firstName': 'Nancy',
+        'personalDetails.lastName': 'Sinatra'
+      },
+      {
+        'personalDetails.firstName': 'Tina',
+        'personalDetails.lastName': 'Sinatra'
+      },
+      {
+        'personalDetails.firstName': 'Frank',
+        'personalDetails.lastName': 'Sinatra'
+      },
+    ]
+  }, 'flatten objects inside arrays');
+  t.end();
+})
