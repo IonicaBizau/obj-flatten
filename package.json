@@ -36,11 +36,9 @@
   },
   "homepage": "https://github.com/IonicaBizau/obj-flatten#readme",
   "blah": {
-    "related": {
-      "ul": [
-        "[`obj-unflatten`](https://github.com/IonicaBizau/obj-unflatten) – Convert flatten objects in nested ones."
-      ]
-    }
+    "related": [
+      "obj-unflatten"
+    ]
   },
   "files": [
     "bin/",
