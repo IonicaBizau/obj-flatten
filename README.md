@@ -36,20 +36,42 @@ console.log(flatten({
   , age: 20
 }, "_"));
 // => { name_first: 'Johnny', name_last: 'B.', age: 20 }
+
+console.log(flatten({
+  personalDetails: {
+      firstName: 'Frank',
+      lastName: 'Sinatra',
+      children: [
+          { personalDetails: { firstName: 'Nancy', lastName: 'Sinatra' } },
+          { personalDetails: { firstName: 'Tina', lastName: 'Sinatra' } },
+          { personalDetails: { firstName: 'Frank', lastName: 'Sinatra' } }
+      ]
+  }
+}));
+// => { 'personalDetails.firstName': 'Frank',
+//      'personalDetails.lastName': 'Sinatra',
+//      'personalDetails.children':
+//       [ { 'personalDetails.firstName': 'Nancy',
+//           'personalDetails.lastName': 'Sinatra' },
+//         { 'personalDetails.firstName': 'Tina',
+//           'personalDetails.lastName': 'Sinatra' },
+//         { 'personalDetails.firstName': 'Frank',
+//           'personalDetails.lastName': 'Sinatra' } ] }
 ```
 
 ## :memo: Documentation
 
 
 ### `flattenObject(obj, del)`
-Converts nested objects in flatten ones.
+Converts nested objects into flattened ones.
+For properties with array values, each array element is flattened in turn.
 
 #### Params
 - **Object** `obj`: The object that should be converted.
 - **String** `del`: The delimiter string (default: ".").
 
 #### Return
-- **Object** Flatten object
+- **Object** Flattened object
 
 
 
