@@ -99,6 +99,12 @@ test('arrays', function (t) {
   }, 'flatten objects inside arrays');
 
   t.deepEqual(flatten({
+    latlon: [ -1, -22]
+  }, '_'), {
+    latlon: [ -1, -22]
+  }, 'array with numbers');
+
+  t.deepEqual(flatten({
     personalDetails: {
         firstName: 'Frank',
         lastName: 'Sinatra',
